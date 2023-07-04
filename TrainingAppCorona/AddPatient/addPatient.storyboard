@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Patient View Controller-->
+        <scene sceneID="uEB-VS-vCA">
+            <objects>
+                <customObject id="zoI-jd-epK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="addPatientId" id="bsT-H0-gwk" customClass="AddPatientViewController" customModule="TrainingAppCorona" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="zGo-OI-o2L">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yCj-eL-5yG">
+                                <rect key="frame" x="8" y="256" width="40" height="32"/>
+                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoBackTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="ijT-R5-mzn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closeButtonPressed:" target="bsT-H0-gwk" id="hze-cB-2pE"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sep-XR-4Nl">
+                                <rect key="frame" x="54" y="260" width="163" height="25"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Add New Patient" id="u1q-yg-9H7">
+                                    <font key="font" metaFont="systemSemibold" size="21"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C4Y-Ya-V7U">
+                                <rect key="frame" x="54" y="214" width="93" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Patient Name: " id="udH-be-VoP">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7os-oH-Pku">
+                                <rect key="frame" x="155" y="211" width="150" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="c46-co-hk3"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" id="xNW-H4-67l">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wfv-Y1-Y6q">
+                                <rect key="frame" x="54" y="178" width="383" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Test Type:" id="A50-xW-6fe">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9LW-0w-0oO" userLabel="Test Types ">
+                                <rect key="frame" x="155" y="127" width="181" height="64"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Px7-df-Mte">
+                                        <rect key="frame" x="-2" y="47" width="183" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="AntiBody" bezelStyle="regularSquare" imagePosition="left" inset="2" id="NiE-e2-tVX">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-n6-XL7">
+                                        <rect key="frame" x="-2" y="23" width="129" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="Lateral Flow Test" bezelStyle="regularSquare" imagePosition="left" inset="2" id="RBu-mN-aDH">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Peg-Sb-jva">
+                                        <rect key="frame" x="-2" y="-1" width="183" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="Polymerian chain reaction" bezelStyle="regularSquare" imagePosition="left" inset="2" id="9yF-Hg-f9B">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Px7-df-Mte" secondAttribute="trailing" id="pxJ-qw-mAA"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wWV-P2-p1q">
+                                <rect key="frame" x="155" y="67" width="78" height="40"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4RU-ON-iIC">
+                                        <rect key="frame" x="-2" y="23" width="74" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="Positive" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="xPo-ag-nWb">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jat-W4-3dQ">
+                                        <rect key="frame" x="-2" y="-1" width="80" height="18"/>
+                                        <buttonCell key="cell" type="radio" title="Negative" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="cai-Vn-DSW">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cjY-u8-1Cq">
+                                <rect key="frame" x="54" y="91" width="75" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Test Result:" id="plp-cd-q1S">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4oC-Gx-nR9">
+                                <rect key="frame" x="373" y="13" width="64" height="32"/>
+                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EYw-OL-LBh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="AccentColor"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" target="bsT-H0-gwk" id="1Zh-If-bgs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="9LW-0w-0oO" firstAttribute="centerX" secondItem="wfv-Y1-Y6q" secondAttribute="centerX" id="0Wq-cX-bkC"/>
+                            <constraint firstAttribute="width" constant="450" id="A1N-eD-B1q"/>
+                            <constraint firstItem="7os-oH-Pku" firstAttribute="centerY" secondItem="C4Y-Ya-V7U" secondAttribute="centerY" id="C7N-oz-l2f"/>
+                            <constraint firstItem="7os-oH-Pku" firstAttribute="leading" secondItem="C4Y-Ya-V7U" secondAttribute="trailing" constant="10" id="ElS-7X-dTC"/>
+                            <constraint firstItem="wfv-Y1-Y6q" firstAttribute="top" secondItem="C4Y-Ya-V7U" secondAttribute="bottom" constant="20" id="F65-7K-O8g"/>
+                            <constraint firstAttribute="bottom" secondItem="4oC-Gx-nR9" secondAttribute="bottom" constant="20" id="KNs-KZ-GkQ"/>
+                            <constraint firstItem="C4Y-Ya-V7U" firstAttribute="top" secondItem="sep-XR-4Nl" secondAttribute="bottom" constant="30" id="OCf-vC-5eW"/>
+                            <constraint firstItem="sep-XR-4Nl" firstAttribute="top" secondItem="zGo-OI-o2L" secondAttribute="top" constant="15" id="Q6a-wd-as4"/>
+                            <constraint firstAttribute="trailing" secondItem="4oC-Gx-nR9" secondAttribute="trailing" constant="20" id="Qpi-zK-ZFY"/>
+                            <constraint firstItem="9LW-0w-0oO" firstAttribute="leading" secondItem="7os-oH-Pku" secondAttribute="leading" id="QvB-WL-Iqr"/>
+                            <constraint firstItem="sep-XR-4Nl" firstAttribute="leading" secondItem="yCj-eL-5yG" secondAttribute="trailing" constant="15" id="U3c-vU-fQk"/>
+                            <constraint firstItem="yCj-eL-5yG" firstAttribute="centerY" secondItem="sep-XR-4Nl" secondAttribute="centerY" id="UQ9-Yn-2cq"/>
+                            <constraint firstItem="wWV-P2-p1q" firstAttribute="top" secondItem="9LW-0w-0oO" secondAttribute="bottom" constant="20" id="Vbf-CC-3Z8"/>
+                            <constraint firstItem="wWV-P2-p1q" firstAttribute="leading" secondItem="9LW-0w-0oO" secondAttribute="leading" id="VyT-dS-usH"/>
+                            <constraint firstAttribute="height" constant="300" id="cKc-iT-Q0v"/>
+                            <constraint firstItem="C4Y-Ya-V7U" firstAttribute="leading" secondItem="sep-XR-4Nl" secondAttribute="leading" id="eRp-ma-cbB"/>
+                            <constraint firstItem="sep-XR-4Nl" firstAttribute="leading" secondItem="yCj-eL-5yG" secondAttribute="trailing" constant="15" id="f7d-Ic-zu9"/>
+                            <constraint firstItem="yCj-eL-5yG" firstAttribute="leading" secondItem="zGo-OI-o2L" secondAttribute="leading" constant="15" id="jxS-Nc-6wb"/>
+                            <constraint firstItem="9LW-0w-0oO" firstAttribute="top" secondItem="7os-oH-Pku" secondAttribute="bottom" constant="20" id="lBA-1A-uvA"/>
+                            <constraint firstItem="wfv-Y1-Y6q" firstAttribute="leading" secondItem="C4Y-Ya-V7U" secondAttribute="leading" id="mXE-Ce-Yys"/>
+                            <constraint firstItem="cjY-u8-1Cq" firstAttribute="leading" secondItem="wfv-Y1-Y6q" secondAttribute="leading" id="u3h-gy-s4u"/>
+                            <constraint firstItem="cjY-u8-1Cq" firstAttribute="top" secondItem="wWV-P2-p1q" secondAttribute="top" id="vKe-Xe-RF5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="patientNameTextField" destination="7os-oH-Pku" id="QLo-0e-lc3"/>
+                        <outlet property="testResultTypesStackView" destination="wWV-P2-p1q" id="wMJ-BL-Dpi"/>
+                        <outlet property="testTypesStackView" destination="9LW-0w-0oO" id="epx-eE-SHD"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSGoBackTemplate" width="12" height="17"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
