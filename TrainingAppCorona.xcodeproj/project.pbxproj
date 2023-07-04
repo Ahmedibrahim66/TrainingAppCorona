@@ -12,7 +12,7 @@
 		FC3DB1DF2A52A2FD00B4CB47 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1DE2A52A2FD00B4CB47 /* AddPatientViewController.swift */; };
 		FC3DB1E62A52E74B00B4CB47 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1E52A52E74B00B4CB47 /* HomePageViewModel.swift */; };
 		FC3DB1EA2A541E9900B4CB47 /* TableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1E92A541E9900B4CB47 /* TableCellView.swift */; };
-		FC3DB1ED2A54598700B4CB47 /* AddPatient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3DB1EC2A54598600B4CB47 /* AddPatient.storyboard */; };
+		FC3DB1ED2A54598700B4CB47 /* AddPatientView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3DB1EC2A54598600B4CB47 /* AddPatientView.storyboard */; };
 		FC7CFB432A507D9C00088CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CFB422A507D9C00088CD5 /* AppDelegate.swift */; };
 		FC7CFB452A507D9C00088CD5 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CFB442A507D9C00088CD5 /* HomePageViewController.swift */; };
 		FC7CFB472A507D9D00088CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7CFB462A507D9D00088CD5 /* Assets.xcassets */; };
@@ -27,7 +27,7 @@
 		FC3DB1DE2A52A2FD00B4CB47 /* AddPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 		FC3DB1E52A52E74B00B4CB47 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		FC3DB1E92A541E9900B4CB47 /* TableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellView.swift; sourceTree = "<group>"; };
-		FC3DB1EC2A54598600B4CB47 /* AddPatient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPatient.storyboard; sourceTree = "<group>"; };
+		FC3DB1EC2A54598600B4CB47 /* AddPatientView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPatientView.storyboard; sourceTree = "<group>"; };
 		FC7CFB3F2A507D9C00088CD5 /* TrainingAppCorona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingAppCorona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7CFB422A507D9C00088CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7CFB442A507D9C00088CD5 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3DB1DE2A52A2FD00B4CB47 /* AddPatientViewController.swift */,
-				FC3DB1EC2A54598600B4CB47 /* AddPatient.storyboard */,
+				FC3DB1EC2A54598600B4CB47 /* AddPatientView.storyboard */,
 			);
 			path = AddPatient;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3DB1ED2A54598700B4CB47 /* AddPatient.storyboard in Resources */,
+				FC3DB1ED2A54598700B4CB47 /* AddPatientView.storyboard in Resources */,
 				FC7CFB472A507D9D00088CD5 /* Assets.xcassets in Resources */,
 				FC7CFB4A2A507D9D00088CD5 /* Main.storyboard in Resources */,
 			);

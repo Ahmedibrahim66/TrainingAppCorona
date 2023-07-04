@@ -103,7 +103,7 @@ class AddPatientViewController: NSViewController {
 // MARK: Instansiate method
 extension AddPatientViewController {
   static func instanstiate() -> AddPatientViewController {
-    let storyboard = NSStoryboard(name: "AddPatient", bundle: .main)
+    let storyboard = NSStoryboard(name: "AddPatientView", bundle: .main)
     let viewController = storyboard.instantiateController(withIdentifier: "addPatientId") as! AddPatientViewController
     return viewController
   }
