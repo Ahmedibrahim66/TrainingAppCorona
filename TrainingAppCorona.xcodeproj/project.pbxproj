@@ -13,6 +13,10 @@
 		FC3DB1E62A52E74B00B4CB47 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1E52A52E74B00B4CB47 /* HomePageViewModel.swift */; };
 		FC3DB1EA2A541E9900B4CB47 /* TableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1E92A541E9900B4CB47 /* TableCellView.swift */; };
 		FC3DB1ED2A54598700B4CB47 /* AddPatientView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3DB1EC2A54598600B4CB47 /* AddPatientView.storyboard */; };
+		FC3DB1F52A55532500B4CB47 /* AppCommonComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DB1F42A55532500B4CB47 /* AppCommonComponents.framework */; };
+		FC3DB1F62A55532500B4CB47 /* AppCommonComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DB1F42A55532500B4CB47 /* AppCommonComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC3DB1F92A5554FB00B4CB47 /* PatientDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3DB1F82A5554FB00B4CB47 /* PatientDetails.xib */; };
+		FC3DB1FC2A55552900B4CB47 /* PatientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1FB2A55552900B4CB47 /* PatientDetails.swift */; };
 		FC7CFB432A507D9C00088CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CFB422A507D9C00088CD5 /* AppDelegate.swift */; };
 		FC7CFB452A507D9C00088CD5 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CFB442A507D9C00088CD5 /* HomePageViewController.swift */; };
 		FC7CFB472A507D9D00088CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7CFB462A507D9D00088CD5 /* Assets.xcassets */; };
@@ -21,6 +25,20 @@
 		FC7CFB552A50D1F600088CD5 /* TestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CFB542A50D1F600088CD5 /* TestType.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FC3DB1F22A55509000B4CB47 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FC3DB1F62A55532500B4CB47 /* AppCommonComponents.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		FC3DB1D92A5170B500B4CB47 /* TestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatus.swift; sourceTree = "<group>"; };
 		FC3DB1DB2A5173D600B4CB47 /* RefreshDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDataType.swift; sourceTree = "<group>"; };
@@ -28,6 +46,9 @@
 		FC3DB1E52A52E74B00B4CB47 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		FC3DB1E92A541E9900B4CB47 /* TableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellView.swift; sourceTree = "<group>"; };
 		FC3DB1EC2A54598600B4CB47 /* AddPatientView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPatientView.storyboard; sourceTree = "<group>"; };
+		FC3DB1F42A55532500B4CB47 /* AppCommonComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCommonComponents.framework; path = Frameworks/AppCommonComponents.framework; sourceTree = "<group>"; };
+		FC3DB1F82A5554FB00B4CB47 /* PatientDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientDetails.xib; sourceTree = "<group>"; };
+		FC3DB1FB2A55552900B4CB47 /* PatientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetails.swift; sourceTree = "<group>"; };
 		FC7CFB3F2A507D9C00088CD5 /* TrainingAppCorona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingAppCorona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7CFB422A507D9C00088CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7CFB442A507D9C00088CD5 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3DB1F52A55532500B4CB47 /* AppCommonComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,11 +97,29 @@
 			path = PatientTable;
 			sourceTree = "<group>";
 		};
+		FC3DB1F32A55532500B4CB47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DB1F42A55532500B4CB47 /* AppCommonComponents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC3DB1F72A5554D700B4CB47 /* PatientDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DB1F82A5554FB00B4CB47 /* PatientDetails.xib */,
+				FC3DB1FB2A55552900B4CB47 /* PatientDetails.swift */,
+			);
+			path = PatientDetails;
+			sourceTree = "<group>";
+		};
 		FC7CFB362A507D9C00088CD5 = {
 			isa = PBXGroup;
 			children = (
 				FC7CFB412A507D9C00088CD5 /* TrainingAppCorona */,
 				FC7CFB402A507D9C00088CD5 /* Products */,
+				FC3DB1F32A55532500B4CB47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +134,7 @@
 		FC7CFB412A507D9C00088CD5 /* TrainingAppCorona */ = {
 			isa = PBXGroup;
 			children = (
+				FC3DB1F72A5554D700B4CB47 /* PatientDetails */,
 				FC3DB1E72A52F36000B4CB47 /* HomePage */,
 				FC3DB1EB2A542F5200B4CB47 /* PatientTable */,
 				FC3DB1E82A52F38F00B4CB47 /* AddPatient */,
@@ -127,6 +168,7 @@
 				FC7CFB3B2A507D9C00088CD5 /* Sources */,
 				FC7CFB3C2A507D9C00088CD5 /* Frameworks */,
 				FC7CFB3D2A507D9C00088CD5 /* Resources */,
+				FC3DB1F22A55509000B4CB47 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +219,7 @@
 			files = (
 				FC3DB1ED2A54598700B4CB47 /* AddPatientView.storyboard in Resources */,
 				FC7CFB472A507D9D00088CD5 /* Assets.xcassets in Resources */,
+				FC3DB1F92A5554FB00B4CB47 /* PatientDetails.xib in Resources */,
 				FC7CFB4A2A507D9D00088CD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +239,7 @@
 				FC7CFB532A50D19200088CD5 /* Patient.swift in Sources */,
 				FC3DB1DA2A5170B500B4CB47 /* TestStatus.swift in Sources */,
 				FC7CFB552A50D1F600088CD5 /* TestType.swift in Sources */,
+				FC3DB1FC2A55552900B4CB47 /* PatientDetails.swift in Sources */,
 				FC3DB1DC2A5173D600B4CB47 /* RefreshDataType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +380,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inhertited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -361,6 +409,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inhertited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;

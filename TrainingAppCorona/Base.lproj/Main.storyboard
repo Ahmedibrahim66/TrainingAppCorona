@@ -849,7 +849,7 @@
                                 </customSpacing>
                             </stackView>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bvT-yc-V35">
-                                <rect key="frame" x="303" y="29" width="69" height="163"/>
+                                <rect key="frame" x="303" y="29" width="69" height="51"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="smallSquare" trackingMode="momentary" id="NgM-ai-69F">
                                     <font key="font" metaFont="system"/>
                                     <segments>
@@ -862,10 +862,10 @@
                                 </connections>
                             </segmentedControl>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-qq-6G6" userLabel="Prgoress Stack">
-                                <rect key="frame" x="525" y="15" width="305" height="176"/>
+                                <rect key="frame" x="525" y="15" width="305" height="64"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kp9-CQ-lpi">
-                                        <rect key="frame" x="-2" y="160" width="151" height="16"/>
+                                        <rect key="frame" x="-2" y="48" width="151" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Name Recovery Process" id="rQe-Ew-FVE">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -873,7 +873,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <progressIndicator maxValue="14" doubleValue="10" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="E8d-u7-9lE">
-                                        <rect key="frame" x="155" y="157" width="150" height="20"/>
+                                        <rect key="frame" x="155" y="45" width="150" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="1ch-h5-tbu"/>
                                         </constraints>
@@ -934,13 +934,13 @@
                                 </customSpacing>
                             </stackView>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vU-Cx-kPI">
-                                <rect key="frame" x="303" y="206" width="527" height="129"/>
+                                <rect key="frame" x="303" y="94" width="527" height="241"/>
                                 <clipView key="contentView" id="xyO-YJ-On6">
-                                    <rect key="frame" x="1" y="1" width="525" height="127"/>
+                                    <rect key="frame" x="1" y="1" width="525" height="239"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="8pr-rB-bWN" viewBased="YES" id="nBO-sJ-VB7">
-                                            <rect key="frame" x="0.0" y="0.0" width="525" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="525" height="211"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1026,7 +1026,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="h0X-07-cIB">
-                                    <rect key="frame" x="1" y="168" width="522" height="16"/>
+                                    <rect key="frame" x="1" y="252" width="493" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="7Fd-1l-jsb">
@@ -1051,6 +1051,16 @@
                                     <action selector="refreshData:" target="XfG-lQ-9wD" id="xcv-cq-pru"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2sD-Al-kUo">
+                                <rect key="frame" x="395" y="38" width="76" height="32"/>
+                                <buttonCell key="cell" type="push" title="Details" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vRT-RI-pGp">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="DetailsButtonPressed:" target="XfG-lQ-9wD" id="cCV-Mv-GUl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ygA-qq-6G6" secondAttribute="bottom" constant="15" id="3BE-cc-97Q"/>
@@ -1068,13 +1078,15 @@
                             <constraint firstItem="1vU-Cx-kPI" firstAttribute="top" secondItem="1sz-fE-FhO" secondAttribute="top" constant="30" id="Xak-47-eYV"/>
                             <constraint firstItem="oy6-Di-K0E" firstAttribute="leading" secondItem="1sz-fE-FhO" secondAttribute="leading" constant="30" id="Y9l-5B-xYX"/>
                             <constraint firstItem="iey-yl-Rbb" firstAttribute="top" secondItem="Z5Y-6L-Fzl" secondAttribute="bottom" constant="30" id="a8F-ei-ESS"/>
+                            <constraint firstItem="ygA-qq-6G6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2sD-Al-kUo" secondAttribute="trailing" constant="30" id="ajr-Da-7Gx"/>
                             <constraint firstItem="1vU-Cx-kPI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Z5Y-6L-Fzl" secondAttribute="trailing" constant="8" symbolic="YES" id="apz-uJ-VIS"/>
                             <constraint firstItem="bvT-yc-V35" firstAttribute="top" secondItem="1vU-Cx-kPI" secondAttribute="bottom" constant="15" id="bDe-Ax-WGd"/>
-                            <constraint firstItem="ygA-qq-6G6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bvT-yc-V35" secondAttribute="trailing" constant="10" id="bkJ-yR-4DF"/>
                             <constraint firstItem="1vU-Cx-kPI" firstAttribute="leading" secondItem="iey-yl-Rbb" secondAttribute="trailing" constant="30" id="eK1-FY-5LC"/>
                             <constraint firstItem="Xdy-KO-hkq" firstAttribute="top" secondItem="oy6-Di-K0E" secondAttribute="bottom" constant="20" id="ghS-Bi-53Q"/>
                             <constraint firstItem="1vU-Cx-kPI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="46d-ZN-kCd" secondAttribute="trailing" constant="8" symbolic="YES" id="gzP-NB-c6P"/>
+                            <constraint firstItem="2sD-Al-kUo" firstAttribute="leading" secondItem="bvT-yc-V35" secondAttribute="trailing" constant="30" id="hfw-ne-YlU"/>
                             <constraint firstItem="bvT-yc-V35" firstAttribute="leading" secondItem="1vU-Cx-kPI" secondAttribute="leading" id="jCh-qd-bXx"/>
+                            <constraint firstItem="2sD-Al-kUo" firstAttribute="centerY" secondItem="bvT-yc-V35" secondAttribute="centerY" id="ka7-RP-Dg2"/>
                             <constraint firstItem="bvT-yc-V35" firstAttribute="leading" secondItem="VRE-E6-aWO" secondAttribute="trailing" constant="8" symbolic="YES" id="pEt-If-GWZ"/>
                             <constraint firstAttribute="bottom" secondItem="bvT-yc-V35" secondAttribute="bottom" constant="30" id="qXO-gR-vvI"/>
                             <constraint firstItem="VRE-E6-aWO" firstAttribute="top" secondItem="iey-yl-Rbb" secondAttribute="bottom" constant="15" id="v1Z-TT-35Z"/>
@@ -1082,6 +1094,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="DetailsButton" destination="2sD-Al-kUo" id="wQP-3c-4KP"/>
                         <outlet property="patientTableView" destination="nBO-sJ-VB7" id="ezO-zJ-4WB"/>
                         <outlet property="progresBarView" destination="E8d-u7-9lE" id="Rjh-3O-cbD"/>
                         <outlet property="progressStack" destination="ygA-qq-6G6" id="zCh-QQ-3jb"/>

@@ -25,6 +25,9 @@ class HomePageViewController: NSViewController {
         // Enable Delete button in segement
         segmentControllView.setEnabled(true, forSegment: 1)
         
+        // Enable Details button
+        detailsButton.isEnabled = true
+        
         // Current selected patient
         let selectedPatient = homePageViewModel.patientList[selectedRow!]
         
@@ -40,17 +43,18 @@ class HomePageViewController: NSViewController {
   }
   
   // MARK: - IBOutlets
-  @IBOutlet weak var refreshDataTypeButton: NSPopUpButton!
-  @IBOutlet weak var refreshIntervalView: NSStackView!
-  @IBOutlet weak var refreshIntervalStepper: NSStepper!
-  @IBOutlet weak var refreshIntervalTextField: NSTextField!
-  @IBOutlet weak var testTypesStack: NSStackView!
-  @IBOutlet weak var patientTableView: NSTableView!
-  @IBOutlet weak var showNegativeResultSwitch: NSSwitch!
-  @IBOutlet weak var segmentControllView: NSSegmentedControl!
-  @IBOutlet weak var progressStack: NSStackView!
-  @IBOutlet weak var recoveryNameLabel: NSTextField!
-  @IBOutlet weak var progresBarView: NSProgressIndicator!
+  @IBOutlet private weak var refreshDataTypeButton: NSPopUpButton!
+  @IBOutlet private weak var refreshIntervalView: NSStackView!
+  @IBOutlet private weak var refreshIntervalStepper: NSStepper!
+  @IBOutlet private weak var refreshIntervalTextField: NSTextField!
+  @IBOutlet private weak var testTypesStack: NSStackView!
+  @IBOutlet private weak var patientTableView: NSTableView!
+  @IBOutlet private weak var showNegativeResultSwitch: NSSwitch!
+  @IBOutlet private weak var segmentControllView: NSSegmentedControl!
+  @IBOutlet private weak var progressStack: NSStackView!
+  @IBOutlet private weak var recoveryNameLabel: NSTextField!
+  @IBOutlet private weak var progresBarView: NSProgressIndicator!
+  @IBOutlet private weak var detailsButton: NSButton!
   
   // MARK: - Life Cycle
   override func viewDidLoad() {
@@ -71,6 +75,8 @@ class HomePageViewController: NSViewController {
     configureProgressStack()
     // Configure the automatic refresh timer
     configureAutomaticRefresh()
+    // Disable Details Button
+    detailsButton.isEnabled = false
   }
   
   override func viewDidAppear() {
@@ -123,6 +129,14 @@ class HomePageViewController: NSViewController {
     }
   }
   
+  @IBAction func DetailsButtonPressed(_ sender: NSButton) {
+    var viewControllerDetails = NSViewController()
+    var patientDetailsView = PatientDetails.createFromNib()
+    viewControllerDetails.view = patientDetailsView
+    patientDetailsView.patientName = homePageViewModel.patientList[selectedRow!].name
+    self.presentAsSheet(viewControllerDetails)
+  }
+  
   
   // MARK: - Private functions
   private func getSelectedCheckBoxesEnums() -> [TestType] {
@@ -148,6 +162,7 @@ class HomePageViewController: NSViewController {
     
     // Set enabled false after delete
     segmentControllView.setEnabled(false, forSegment: 1)
+    detailsButton.isEnabled = false
   }
   
   private func refreshTableData(){
@@ -266,6 +281,7 @@ extension HomePageViewController: NSTableViewDelegate {
       segmentControllView.setEnabled(false, forSegment: 1)
       recoveryNameLabel.stringValue = ""
       progressStack.isHidden = true
+      detailsButton.isEnabled = false
     }
   }
 }
