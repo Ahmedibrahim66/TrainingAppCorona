@@ -849,7 +849,7 @@
                                 </customSpacing>
                             </stackView>
                             <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bvT-yc-V35">
-                                <rect key="frame" x="303" y="29" width="69" height="135"/>
+                                <rect key="frame" x="303" y="29" width="69" height="191"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="smallSquare" trackingMode="momentary" id="NgM-ai-69F">
                                     <font key="font" metaFont="system"/>
                                     <segments>
@@ -862,10 +862,10 @@
                                 </connections>
                             </segmentedControl>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-qq-6G6" userLabel="Prgoress Stack">
-                                <rect key="frame" x="525" y="15" width="305" height="148"/>
+                                <rect key="frame" x="525" y="15" width="305" height="204"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kp9-CQ-lpi">
-                                        <rect key="frame" x="-2" y="132" width="151" height="16"/>
+                                        <rect key="frame" x="-2" y="188" width="151" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Name Recovery Process" id="rQe-Ew-FVE">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -873,7 +873,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <progressIndicator maxValue="14" doubleValue="10" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="E8d-u7-9lE">
-                                        <rect key="frame" x="155" y="129" width="150" height="20"/>
+                                        <rect key="frame" x="155" y="185" width="150" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="1ch-h5-tbu"/>
                                         </constraints>
@@ -934,13 +934,13 @@
                                 </customSpacing>
                             </stackView>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vU-Cx-kPI">
-                                <rect key="frame" x="303" y="178" width="527" height="157"/>
+                                <rect key="frame" x="303" y="234" width="527" height="101"/>
                                 <clipView key="contentView" id="xyO-YJ-On6">
-                                    <rect key="frame" x="1" y="1" width="525" height="155"/>
+                                    <rect key="frame" x="1" y="1" width="525" height="99"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="8pr-rB-bWN" viewBased="YES" id="nBO-sJ-VB7">
-                                            <rect key="frame" x="0.0" y="0.0" width="525" height="127"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="525" height="71"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1026,7 +1026,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="h0X-07-cIB">
-                                    <rect key="frame" x="1" y="224" width="525" height="16"/>
+                                    <rect key="frame" x="1" y="140" width="525" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="7Fd-1l-jsb">
@@ -1052,13 +1052,13 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2sD-Al-kUo">
-                                <rect key="frame" x="395" y="80" width="76" height="32"/>
+                                <rect key="frame" x="395" y="108" width="76" height="32"/>
                                 <buttonCell key="cell" type="push" title="Details" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vRT-RI-pGp">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="DetailsButtonPressed:" target="XfG-lQ-9wD" id="cCV-Mv-GUl"/>
+                                    <action selector="detailsButtonPressed:" target="XfG-lQ-9wD" id="Tf2-7u-8ad"/>
                                 </connections>
                             </button>
                         </subviews>

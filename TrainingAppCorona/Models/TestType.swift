@@ -7,6 +7,7 @@
 
 import Cocoa
 
+// FIXME: - choose a better name to more accurate like CovidTestType
 enum TestType: CaseIterable {
   
   case serology

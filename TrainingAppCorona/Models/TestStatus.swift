@@ -13,5 +13,5 @@ enum TestResultStatus: String {
 }
 
 extension TestResultStatus: CaseIterable {
-  
+    // FIXME: - if it's empty do it as extension yyyy : xxx {}
 }

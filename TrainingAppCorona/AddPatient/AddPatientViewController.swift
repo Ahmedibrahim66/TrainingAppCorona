@@ -8,6 +8,7 @@
 import Cocoa
 
 protocol AddPatientViewControllerDelegate: AnyObject {
+    // FIXME: - should use better name func addPatientViewController(_ sender: AddPatientViewController, didCreatePatient patient: Patient)
   func savePatientClicked(_ sender: AddPatientViewController, patient: Patient)
 }
 
@@ -15,27 +16,36 @@ class AddPatientViewController: NSViewController {
   
   
   // MARK: - Public properties
+    
+    // FIXME: - no need to save buttos can be read from stack directly stack.arrangedSubViews
+    // FIXME: - should be private
   var testTypesButtons: [NSButton] = []
   var testResultButtons: [NSButton] = []
   weak var delegate: AddPatientViewControllerDelegate?
 
   // MARK: - IBOutlets
+    // FIXME: - should be private
   @IBOutlet weak var patientNameTextField: NSTextField!
   @IBOutlet weak var testTypesStackView: NSStackView!
   @IBOutlet weak var testResultTypesStackView: NSStackView!
   
+    // FIXME: - if its empty no need for it
   // MARK: - Private properties
   
   // MARK: - Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+      // FIXME: - make sure to write correct comments
     //self.view.isre
+    // FIXME: - use a seperate function to setup buttons
+      // FIXME: - better to use stack.arrangedSubView.forEach({ $0.removeFromSuperView() })
     // Fill Test types radio buttons
     testTypesStackView.subviews.removeAll()
     for testType in TestType.allCases {
       let radioButton = NSButton(radioButtonWithTitle: testType.description, target: nil, action: #selector(testTypesButtonPressed(_:)))
       radioButton.state = .off
       testTypesButtons.append(radioButton)
+        // FIXME: - better use addArrangedSubViews
       testTypesStackView.addView(radioButton, in:  NSStackView.Gravity.bottom)
     }
     patientNameTextField.layer?.borderColor = NSColor.red.cgColor
@@ -45,6 +55,7 @@ class AddPatientViewController: NSViewController {
     
     // Fill test result radio buttons
     for testResult in TestResultStatus.allCases {
+        // FIXME: - can create function to create the button and be used here and above by sending name and selector
       let radioButton = NSButton(radioButtonWithTitle: testResult.rawValue, target: self, action: #selector(testResultButtonClicked(_:)))
       radioButton.state = .off
       testResultButtons.append(radioButton)
@@ -74,6 +85,7 @@ class AddPatientViewController: NSViewController {
   }
   
   // MARK: - Public functions
+    
   @objc func testTypesButtonPressed(_ sender: NSButton) {
   }
   
@@ -104,7 +116,12 @@ class AddPatientViewController: NSViewController {
 extension AddPatientViewController {
   static func instanstiate() -> AddPatientViewController {
     let storyboard = NSStoryboard(name: "AddPatientView", bundle: .main)
-    let viewController = storyboard.instantiateController(withIdentifier: "addPatientId") as! AddPatientViewController
+      // FIXME: 1. Linter was not working
+      // 2. fixed to allowed to work
+      // 3. not allowed to force cast
+      guard let viewController = storyboard.instantiateController(withIdentifier: "addPatientId") as? AddPatientViewController else {
+          return AddPatientViewController()
+      }
     return viewController
   }
 }
