@@ -14,13 +14,13 @@ class HomePageViewController: NSViewController {
   var timer: Timer?
   var homePageViewModel = HomePageViewModel()
   var refreshInterval = 5 {
-    didSet{
+    didSet {
       timer?.invalidate()
       timer = Timer.scheduledTimer(timeInterval: TimeInterval(refreshInterval), target: self, selector: #selector(timerFired(_:)), userInfo: nil, repeats: true)
     }
   }
   var selectedRow: Int? {
-    didSet{
+    didSet {
       if selectedRow != nil {
         // Enable Delete button in segement
         segmentControllView.setEnabled(true, forSegment: 1)
@@ -109,6 +109,7 @@ class HomePageViewController: NSViewController {
   }
   
   @IBAction func refreshData(_ sender: NSButton) {
+    homePageViewModel.applyFilter(selectedTypes: getSelectedCheckBoxesEnums(), showNegativeResult: showNegativeResultSwitch.state == .on)
     refreshTableData()
   }
   
@@ -121,7 +122,7 @@ class HomePageViewController: NSViewController {
         timer?.invalidate()
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(refreshInterval),
                                      target: self, selector: #selector(timerFired(_:)),
-                                     userInfo: nil, repeats:true)
+                                     userInfo: nil, repeats: true)
       case .manual:
         refreshIntervalView.isHidden = true
         timer?.invalidate()
@@ -129,14 +130,13 @@ class HomePageViewController: NSViewController {
     }
   }
   
-  @IBAction func DetailsButtonPressed(_ sender: NSButton) {
-    var viewControllerDetails = NSViewController()
-    var patientDetailsView = PatientDetails.createFromNib()
+  @IBAction func detailsButtonPressed(_ sender: NSButton) {
+    let viewControllerDetails = NSViewController()
+    let patientDetailsView = PatientDetails.createFromNib()
     viewControllerDetails.view = patientDetailsView
     patientDetailsView.patientName = homePageViewModel.patientList[selectedRow!].name
     self.presentAsSheet(viewControllerDetails)
   }
-  
   
   // MARK: - Private functions
   private func getSelectedCheckBoxesEnums() -> [TestType] {
@@ -151,7 +151,7 @@ class HomePageViewController: NSViewController {
     return selectedEnums
   }
   
-  private func deletePatientFromRow(index: Int?){
+  private func deletePatientFromRow(index: Int?) {
     
     guard index != nil else {
       return
@@ -165,13 +165,11 @@ class HomePageViewController: NSViewController {
     detailsButton.isEnabled = false
   }
   
-  private func refreshTableData(){
-    homePageViewModel.applyFilter(selectedTypes: getSelectedCheckBoxesEnums(),
-                                  showNegativeResult: showNegativeResultSwitch.state == .off)
+  private func refreshTableData() {
     patientTableView.reloadData()
   }
   
-  private func fillRefreshTypePopUp(){
+  private func fillRefreshTypePopUp() {
     refreshDataTypeButton.removeAllItems()
     for refreshType in RefreshDataType.allCases {
       refreshDataTypeButton.addItem(withTitle: refreshType.description)

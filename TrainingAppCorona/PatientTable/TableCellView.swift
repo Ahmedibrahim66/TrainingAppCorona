@@ -12,7 +12,7 @@ protocol TabelCellViewDelegate: AnyObject {
   func labelEditFinished(newValue: String)
 }
 
-class TableCellView: NSTableCellView {
+class TableCellView: NSTableCellView, NSTextFieldDelegate {
   
   // MARK: - Public properties
   weak var delegate: TabelCellViewDelegate?

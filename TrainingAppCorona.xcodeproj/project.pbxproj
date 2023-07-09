@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC03A7612A56D55E0046820E /* TrainingAppCoronaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03A7602A56D55E0046820E /* TrainingAppCoronaUITests.swift */; };
+		FC03A7632A56D55E0046820E /* TrainingAppCoronaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC03A7622A56D55E0046820E /* TrainingAppCoronaUITestsLaunchTests.swift */; };
 		FC3DB1DA2A5170B500B4CB47 /* TestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1D92A5170B500B4CB47 /* TestStatus.swift */; };
 		FC3DB1DC2A5173D600B4CB47 /* RefreshDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1DB2A5173D600B4CB47 /* RefreshDataType.swift */; };
 		FC3DB1DF2A52A2FD00B4CB47 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1DE2A52A2FD00B4CB47 /* AddPatientViewController.swift */; };
@@ -17,6 +19,7 @@
 		FC3DB1F62A55532500B4CB47 /* AppCommonComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DB1F42A55532500B4CB47 /* AppCommonComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC3DB1F92A5554FB00B4CB47 /* PatientDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3DB1F82A5554FB00B4CB47 /* PatientDetails.xib */; };
 		FC3DB1FC2A55552900B4CB47 /* PatientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB1FB2A55552900B4CB47 /* PatientDetails.swift */; };
+		FC3DB2042A569E2400B4CB47 /* TrainingAppCoronaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DB2032A569E2400B4CB47 /* TrainingAppCoronaTests.swift */; };
 		FC7CFB432A507D9C00088CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CFB422A507D9C00088CD5 /* AppDelegate.swift */; };
 		FC7CFB452A507D9C00088CD5 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CFB442A507D9C00088CD5 /* HomePageViewController.swift */; };
 		FC7CFB472A507D9D00088CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7CFB462A507D9D00088CD5 /* Assets.xcassets */; };
@@ -24,6 +27,23 @@
 		FC7CFB532A50D19200088CD5 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CFB522A50D19200088CD5 /* Patient.swift */; };
 		FC7CFB552A50D1F600088CD5 /* TestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CFB542A50D1F600088CD5 /* TestType.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC03A7642A56D55E0046820E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7CFB372A507D9C00088CD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC7CFB3E2A507D9C00088CD5;
+			remoteInfo = TrainingAppCorona;
+		};
+		FC3DB2052A569E2400B4CB47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC7CFB372A507D9C00088CD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC7CFB3E2A507D9C00088CD5;
+			remoteInfo = TrainingAppCorona;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FC3DB1F22A55509000B4CB47 /* Embed Frameworks */ = {
@@ -40,6 +60,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC03A75E2A56D55E0046820E /* TrainingAppCoronaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingAppCoronaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC03A7602A56D55E0046820E /* TrainingAppCoronaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAppCoronaUITests.swift; sourceTree = "<group>"; };
+		FC03A7622A56D55E0046820E /* TrainingAppCoronaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAppCoronaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC3DB1D92A5170B500B4CB47 /* TestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatus.swift; sourceTree = "<group>"; };
 		FC3DB1DB2A5173D600B4CB47 /* RefreshDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDataType.swift; sourceTree = "<group>"; };
 		FC3DB1DE2A52A2FD00B4CB47 /* AddPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +72,8 @@
 		FC3DB1F42A55532500B4CB47 /* AppCommonComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCommonComponents.framework; path = Frameworks/AppCommonComponents.framework; sourceTree = "<group>"; };
 		FC3DB1F82A5554FB00B4CB47 /* PatientDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientDetails.xib; sourceTree = "<group>"; };
 		FC3DB1FB2A55552900B4CB47 /* PatientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetails.swift; sourceTree = "<group>"; };
+		FC3DB2012A569E2400B4CB47 /* TrainingAppCoronaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingAppCoronaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3DB2032A569E2400B4CB47 /* TrainingAppCoronaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAppCoronaTests.swift; sourceTree = "<group>"; };
 		FC7CFB3F2A507D9C00088CD5 /* TrainingAppCorona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingAppCorona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7CFB422A507D9C00088CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7CFB442A507D9C00088CD5 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +85,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FC03A75B2A56D55E0046820E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3DB1FE2A569E2400B4CB47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC7CFB3C2A507D9C00088CD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC03A75F2A56D55E0046820E /* TrainingAppCoronaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC03A7602A56D55E0046820E /* TrainingAppCoronaUITests.swift */,
+				FC03A7622A56D55E0046820E /* TrainingAppCoronaUITestsLaunchTests.swift */,
+			);
+			path = TrainingAppCoronaUITests;
+			sourceTree = "<group>";
+		};
 		FC3DB1E72A52F36000B4CB47 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +162,20 @@
 			path = PatientDetails;
 			sourceTree = "<group>";
 		};
+		FC3DB2022A569E2400B4CB47 /* TrainingAppCoronaTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DB2032A569E2400B4CB47 /* TrainingAppCoronaTests.swift */,
+			);
+			path = TrainingAppCoronaTests;
+			sourceTree = "<group>";
+		};
 		FC7CFB362A507D9C00088CD5 = {
 			isa = PBXGroup;
 			children = (
 				FC7CFB412A507D9C00088CD5 /* TrainingAppCorona */,
+				FC3DB2022A569E2400B4CB47 /* TrainingAppCoronaTests */,
+				FC03A75F2A56D55E0046820E /* TrainingAppCoronaUITests */,
 				FC7CFB402A507D9C00088CD5 /* Products */,
 				FC3DB1F32A55532500B4CB47 /* Frameworks */,
 			);
@@ -127,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				FC7CFB3F2A507D9C00088CD5 /* TrainingAppCorona.app */,
+				FC3DB2012A569E2400B4CB47 /* TrainingAppCoronaTests.xctest */,
+				FC03A75E2A56D55E0046820E /* TrainingAppCoronaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +221,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FC03A75D2A56D55E0046820E /* TrainingAppCoronaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC03A7682A56D55E0046820E /* Build configuration list for PBXNativeTarget "TrainingAppCoronaUITests" */;
+			buildPhases = (
+				FC03A75A2A56D55E0046820E /* Sources */,
+				FC03A75B2A56D55E0046820E /* Frameworks */,
+				FC03A75C2A56D55E0046820E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC03A7652A56D55E0046820E /* PBXTargetDependency */,
+			);
+			name = TrainingAppCoronaUITests;
+			productName = TrainingAppCoronaUITests;
+			productReference = FC03A75E2A56D55E0046820E /* TrainingAppCoronaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FC3DB2002A569E2400B4CB47 /* TrainingAppCoronaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3DB2072A569E2400B4CB47 /* Build configuration list for PBXNativeTarget "TrainingAppCoronaTests" */;
+			buildPhases = (
+				FC3DB1FD2A569E2400B4CB47 /* Sources */,
+				FC3DB1FE2A569E2400B4CB47 /* Frameworks */,
+				FC3DB1FF2A569E2400B4CB47 /* Resources */,
+				FCFF735F2A56E9DF007F9DD9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC3DB2062A569E2400B4CB47 /* PBXTargetDependency */,
+			);
+			name = TrainingAppCoronaTests;
+			productName = TrainingAppCoronaTests;
+			productReference = FC3DB2012A569E2400B4CB47 /* TrainingAppCoronaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FC7CFB3E2A507D9C00088CD5 /* TrainingAppCorona */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC7CFB4E2A507D9D00088CD5 /* Build configuration list for PBXNativeTarget "TrainingAppCorona" */;
@@ -169,6 +266,7 @@
 				FC7CFB3C2A507D9C00088CD5 /* Frameworks */,
 				FC7CFB3D2A507D9C00088CD5 /* Resources */,
 				FC3DB1F22A55509000B4CB47 /* Embed Frameworks */,
+				FC2CA04F2A56EB250027F579 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -189,6 +287,14 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					FC03A75D2A56D55E0046820E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FC7CFB3E2A507D9C00088CD5;
+					};
+					FC3DB2002A569E2400B4CB47 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FC7CFB3E2A507D9C00088CD5;
+					};
 					FC7CFB3E2A507D9C00088CD5 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -208,11 +314,27 @@
 			projectRoot = "";
 			targets = (
 				FC7CFB3E2A507D9C00088CD5 /* TrainingAppCorona */,
+				FC3DB2002A569E2400B4CB47 /* TrainingAppCoronaTests */,
+				FC03A75D2A56D55E0046820E /* TrainingAppCoronaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FC03A75C2A56D55E0046820E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3DB1FF2A569E2400B4CB47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC7CFB3D2A507D9C00088CD5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,7 +348,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FC2CA04F2A56EB250027F579 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./ide_swiftlint.sh\n";
+		};
+		FCFF735F2A56E9DF007F9DD9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		FC03A75A2A56D55E0046820E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC03A7632A56D55E0046820E /* TrainingAppCoronaUITestsLaunchTests.swift in Sources */,
+				FC03A7612A56D55E0046820E /* TrainingAppCoronaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3DB1FD2A569E2400B4CB47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3DB2042A569E2400B4CB47 /* TrainingAppCoronaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC7CFB3B2A507D9C00088CD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +423,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FC03A7652A56D55E0046820E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC7CFB3E2A507D9C00088CD5 /* TrainingAppCorona */;
+			targetProxy = FC03A7642A56D55E0046820E /* PBXContainerItemProxy */;
+		};
+		FC3DB2062A569E2400B4CB47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC7CFB3E2A507D9C00088CD5 /* TrainingAppCorona */;
+			targetProxy = FC3DB2052A569E2400B4CB47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FC7CFB482A507D9D00088CD5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -258,6 +448,78 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FC03A7662A56D55E0046820E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Training.TrainingAppCoronaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TrainingAppCorona;
+			};
+			name = Debug;
+		};
+		FC03A7672A56D55E0046820E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Training.TrainingAppCoronaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TrainingAppCorona;
+			};
+			name = Release;
+		};
+		FC3DB2082A569E2400B4CB47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Training.TrainingAppCoronaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingAppCorona.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrainingAppCorona";
+			};
+			name = Debug;
+		};
+		FC3DB2092A569E2400B4CB47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Training.TrainingAppCoronaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingAppCorona.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrainingAppCorona";
+			};
+			name = Release;
+		};
 		FC7CFB4C2A507D9D00088CD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -432,6 +694,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FC03A7682A56D55E0046820E /* Build configuration list for PBXNativeTarget "TrainingAppCoronaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC03A7662A56D55E0046820E /* Debug */,
+				FC03A7672A56D55E0046820E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3DB2072A569E2400B4CB47 /* Build configuration list for PBXNativeTarget "TrainingAppCoronaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3DB2082A569E2400B4CB47 /* Debug */,
+				FC3DB2092A569E2400B4CB47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FC7CFB3A2A507D9C00088CD5 /* Build configuration list for PBXProject "TrainingAppCorona" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

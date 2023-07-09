@@ -34,18 +34,19 @@ class HomePageViewModel {
     patientList = originalPatientList
   }
   
-  func addPatient(patient: Patient){
+  func addPatient(patient: Patient) {
     originalPatientList.append(patient)
+    patientList.append(patient)
   }
   
-  func editPatientName(patientIndex: Int, newValue: String){
+  func editPatientName(patientIndex: Int, newValue: String) {
     if let originalIndex = originalPatientList.firstIndex(where: {(value) -> Bool in
-      return value == patientList[patientIndex]}){
+      return value == patientList[patientIndex]}) {
       originalPatientList[originalIndex].name = newValue
     }
   }
   
-  func deletePatient(index: Int?){
+  func deletePatient(index: Int?) {
     if let originalIndex = originalPatientList.firstIndex(where: { (value) -> Bool in
       return value.name == patientList[index!].name
     }) {
@@ -60,7 +61,7 @@ class HomePageViewModel {
       selectedTypes.contains(patient.testType)
     }
     
-    if  showNegativeResult {
+    if  !showNegativeResult {
       patientList = patientList.filter { patient in
         patient.testResultStatus == .positive
       }
